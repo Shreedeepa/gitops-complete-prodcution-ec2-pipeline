@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete-prodcution-e2e-deployment
+  name: complete-prodcution-ec2-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: complete-prodcution-e2e-app
+      app: complete-prodcution-ec2-app
   template:
     metadata:
       labels:
-        app: complete-prodcution-e2e-app
+        app: complete-prodcution-ec2-app
     spec:
       containers:
-        - name: complete-prodcution-e2e-app
-          image: dmancloud/complete-prodcution-e2e-pipeline:1.0.0-36
+        - name: complete-prodcution-ec2-app
+          image: deepashreekl/complete-prodcution-ec2-pipeline:1.0.0-11
           resources:
             limits:
               memory: "256Mi"
